@@ -33,13 +33,8 @@ export const productone =
     des:'this is keyboard from dell company',
       save:'30%'
 },
-
-
-]
-export const producttwo =
-[
-    {
-    id: 1,
+      {
+    id: 5,
     name: 'LabTop',
     img:'https://images.pexels.com/photos/22679367/pexels-photo-22679367/free-photo-of-electronics-on-pink-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     price: 700,
@@ -47,7 +42,7 @@ export const producttwo =
     save:'40%'
 },
     {
-    id: 2,
+    id: 6,
     name: 'Ipad ',
     img:"https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     price: 100,
@@ -55,7 +50,7 @@ export const producttwo =
       save:'5%'
 },
     {
-    id: 3,
+    id: 7,
     name: 'Setup for Tv',
     img:'https://images.pexels.com/photos/1046639/pexels-photo-1046639.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     price: 1000,
@@ -63,13 +58,11 @@ export const producttwo =
       save:'25%'
 },
     {
-    id: 4,
+    id: 8,
     name: 'Camera sd4',
     img:'https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
     price: 2000,
     desc:'this is camera sd4 from Canon company',
       save:'15%'
 },
-
-
 ]
