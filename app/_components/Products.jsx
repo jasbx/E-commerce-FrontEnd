@@ -1,7 +1,7 @@
 "use client"
 import React from 'react'
 import { productone } from '../productData'
-import { producttwo } from '../productData'
+
 import {motion} from 'framer-motion'
 const Products = () => {
   const DivVarints={
@@ -14,93 +14,67 @@ const Products = () => {
   }
 
   return (
-    <div className='container mx-auto '>
-<motion.div variants={DivVarints} initial="start" whileInView="end" transition={{
-  duration:1,
-  type:'spring',
-  stiffness:130,
-  damping:5
-}} className='flex justify-center space-x-5 space-y-5 flex-col md:flex-row '>
-{ 
-productone.map((products)=>(
-
-
-<a href="#" className="relative block rounded-tr-3xl border border-gray-100">
-  <span
-    className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white"
-  >
-    Save {products.save}
-  </span>
-
-  <img
-    src={products.img}
-    alt=""
-    className="h-80 w-full rounded-tr-3xl object-cover"
-  />
-
-  <div className="p-4 text-center">
-    <strong className="text-xl font-medium text-gray-900"> {products.name} </strong>
-
-    <p className="mt-2 text-pretty text-gray-700">
-      {products.des}
-    </p>
-
-    <span
-      className="mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900"
-    >
-      Learn More
-    </span>
-  </div>
-</a>
-))}
-
-</motion.div>
-<motion.div variants={DivVarints} initial="start" whileInView="end"
+    <section>
+    <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <header>
+        <h2 className="text-xl font-bold text-gray-900 sm:text-3xl">Product Collection</h2>
+  
+        <p className="mt-4 max-w-md text-gray-500">
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Itaque praesentium cumque iure
+          dicta incidunt est ipsam, officia dolor fugit natus?
+        </p>
+      </header>
+      <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+ {   productone.map((pro)=>(  <motion.li
+ 
+ 
+ initial={{
+  x:50,
+  y:50
+ }}
+ whileInView={{
+ x:0,
+ y:0
+ }}
  transition={{
-  duration:1,
-  type:'spring',
-  stiffness:130,
-  damping:5
-}}
+   type:'spring',
+   damping:10,
+   stiffness:150
+ }}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ >
+        <a href="#" className="group block overflow-hidden">
+          <img
+            src={pro.img}
+            alt=""
+            className="h-[350px] w-full object-cover transition duration-500 group-hover:scale-105 sm:h-[450px]"
+          />
 
-className='flex justify-center space-x-5 space-y-5 flex-col md:flex-row'>
-{ 
-producttwo.map((product)=>(
+          <div className="relative bg-white pt-3">
+            <h3 className="text-xs text-gray-700 group-hover:underline group-hover:underline-offset-4">
+           {pro.name}
+            </h3>
 
+            <p className="mt-2">
+              <span className="sr-only"> Regular Price </span>
 
-<a href="#" className="relative block rounded-tr-3xl border border-gray-100">
-  <span
-    className="absolute -right-px -top-px rounded-bl-3xl rounded-tr-3xl bg-rose-600 px-6 py-4 font-medium uppercase tracking-widest text-white"
-  >
-     Save {product.save}
-  </span>
-
-  <img
-    src={product.img}
-    alt="products"
-    className="h-80 w-full rounded-tr-3xl object-cover"
-  />
-
-  <div className="p-4 text-center">
-    <strong className="text-xl font-medium text-gray-900"> {product.name} </strong>
-
-    <p className="mt-2 text-pretty text-gray-700">
-      {product.desc}
-    </p>
-
-    <span
-      className="mt-4 block rounded-md border border-indigo-900 bg-indigo-900 px-5 py-3 text-sm font-medium uppercase tracking-widest text-white transition-colors hover:bg-white hover:text-indigo-900"
-    >
-      Learn More
-    </span>
-  </div>
-</a>
-))}
-
-</motion.div>
-
-
+              <span className="tracking-wider text-gray-900"> ${pro.price} USD </span>
+            </p>
+          </div>
+        </a>
+      </motion.li>))}
+</ul>
+     
+  
+    
     </div>
+  </section>
   )
 }
 
