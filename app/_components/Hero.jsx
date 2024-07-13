@@ -3,7 +3,7 @@ import React from 'react'
 import {motion} from 'framer-motion';
 function Hero() {
   let text="Ecommerce is the electronic buying and selling of goods and services, usually via the internet. Businesses can build their own ecommerce website, set up an ecommerce storefront on an established selling site like Amazon, or do it all for a multi-channel approach."
- let text2="from Home ..."
+ let text2="from Home"
   return (
   
 <section
