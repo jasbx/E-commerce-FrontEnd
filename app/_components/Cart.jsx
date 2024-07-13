@@ -1,16 +1,33 @@
 import React, { useState } from 'react'
-
+import {motion} from 'framer-motion'
 const Cart = () => {
   const [open,setOpen]=useState(true)
+
   const HandleOpen=()=>{
     setOpen(!open)
   }
+  
   return (
 <>
 {
   open&&
-<div
-  className="  fixed z-10  right-0 top-0 w-screen max-w-sm border border-gray-600 bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
+<motion.div
+
+initial={{
+  y:'-100vh'
+}}
+  animate={{
+    y:0
+  }}
+  transition={{
+    type:'spring',
+    stiffness:150,
+    damping:5,
+    delay:.5
+
+  }}
+
+  className="fixed z-10  right-0 top-0 w-screen max-w-sm border border-gray-600 bg-gray-100 px-4 py-8 sm:px-6 lg:px-8"
   aria-modal="true"
   role="dialog"
   tabIndex="-1"
@@ -227,7 +244,7 @@ const Cart = () => {
       </a>
     </div>
   </div>
-</div>
+</motion.div>
 
 }
 </>
