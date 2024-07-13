@@ -10,7 +10,7 @@ const HandleSubmit=(e)=>{
   toast.success(`dear ${name} Information has ben sending successfully ! `)
 }
   return (
- <div className='flex justify-center items-center mt-24'>
+ <div className='flex justify-center items-center mt-24 mx-6 md:mx-0'>
        <form class="w-full max-w-lg" onSubmit={HandleSubmit}>
     <div class="flex flex-wrap -mx-3 mb-6">
       <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
