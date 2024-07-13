@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React,{useState,useEffect} from 'react'
 
 import {ShoppingCart} from 'lucide-react'
-
+import {motion} from 'framer-motion';
 import Cart from './Cart';
 const Header = () => {
    
@@ -16,7 +16,22 @@ const Header = () => {
   return  (
    
     <header>
-            <nav className="bg-white shadow-md border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+            <motion.nav
+               
+                  initial={{
+                y:'-100vh'
+            }}
+            animate={{
+                y:0
+            }}
+            transition={{
+                type: 'spring',
+                ease: 'easeInOut',
+                duration: 0.6,
+                damping:8
+               
+            }}
+               className="bg-white shadow-md border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                 <div className="flex  flex-wrap justify-between items-center mx-auto max-w-screen-xl">
                     <Link href="#" className="flex items-center hidden md:flex">
                         <img src="/j.png" className="mr-3 h-6 sm:h-9" alt=" Logo" />
@@ -66,7 +81,7 @@ const Header = () => {
                 </div>
                    }
                 </div>
-            </nav>
+            </motion.nav>
             
     
         </header>
